@@ -15,7 +15,7 @@ export default function EmailCaptureForm() {
   };
 
   return (
-    <div className="flex justify-center items-center px-4">
+    <div className="flex justify-center items-center px-4 w-full">
       <form
         className="flex border border-white/15 rounded-full p-2 mt-8 justify-between w-full max-w-lg"
         onSubmit={handleSubmit}
@@ -25,7 +25,7 @@ export default function EmailCaptureForm() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Enter your email"
-          className="bg-transparent px-4 flex-1 text-sm md:text-base placeholder-white/70 focus:outline-none text-white"
+          className="!bg-transparent px-4 flex-1 text-sm md:text-base placeholder-white/70 focus:outline-none text-white"
           required
         />
         <Button

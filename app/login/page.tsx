@@ -6,7 +6,7 @@ export default function Login() {
     return (
       <>
       <Header />
-      <div className="h-[calc(100vh-92px)] md:h-[calc(100vh-98px)] xl:h-[calc(100vh-130px)] flex flex-col justify-center max-w-lg mx-auto gap-6">
+      <div className="h-[calc(100vh-68px)] md:h-[calc(100vh-98px)] xl:h-[calc(100vh-130px)] flex flex-col justify-center max-w-lg mx-auto gap-6">
         <h3 className="text-2xl md:text-4xl font-medium text-center">Let&apos;s continue where you <br /><span className="text-lime-400">left off</span></h3>
         {/* <h2 className="font-medium text-center text-3xl">Log in</h2> */}
         <form className="flex flex-col  justify-center items-center gap-4">

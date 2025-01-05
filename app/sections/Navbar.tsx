@@ -110,14 +110,14 @@ export default function Navbar() {
                 exit={{ height: 0 }}
                 className="overflow-hidden"
               >
-                <div className="flex flex-col items-center justify-evenly py-4 h-lvh -mt-10">
+                <div className="flex flex-col items-center justify-evenly py-4 h-[500px] -mt-10">
                   {navLinks.map((link) => (
                     <a href={link.href} key={link.label} className="text-center hover:text-white/30">
                       {link.label}
                       <hr className="border-white/30 mt-4 w-[250px]"/>
                     </a>
                   ))}
-                  <div className="flex gap-4 -mt-6">
+                  <div className="flex gap-4 -mt-6 pb-[-30px]">
                   <Button variant="secondary"><a href="/login">Log in</a></Button>
                   <Button variant="primary"><a href="/signup">Sign Up</a></Button>
                   </div>
