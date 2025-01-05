@@ -12,7 +12,7 @@ export default function CallToAction() {
     animation.current = animate(scope.current, {x: '-50%'},
     {duration: 30, ease: 'linear', repeat:Infinity}
     );
-  }, [])
+  })
 
   useEffect(()=>{
     if(animation.current){

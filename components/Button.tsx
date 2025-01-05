@@ -17,10 +17,9 @@ const Button = (
   props: {
     variant: "primary" | "secondary";
     size?: 'sm'
-    href?: string;
   } & ButtonHTMLAttributes<HTMLButtonElement>
 ) => {
-  const { variant, className, size, href, ...otherProps } = props;
+  const { variant, className, size, ...otherProps } = props;
   return <button className={classes({ variant, size, className })} {...otherProps} />;
 };
 

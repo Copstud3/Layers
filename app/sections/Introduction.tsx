@@ -1,7 +1,7 @@
 'use client'
 
 import Tag from "@/components/Tag";
-import { useMotionValueEvent, useScroll, useTransform } from "motion/react";
+import { useScroll, useTransform } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import { twMerge } from "tailwind-merge";
 
@@ -31,7 +31,7 @@ export default function Introduction() {
           <span>{words.map((word, wordIndex) => (
              <span key={wordIndex} className={twMerge ( "transition duration-500 text-white/15", wordIndex < currentWord && 'text-white' )}>{`${word} `}</span>
           ))}</span>
-          <span className="text-lime-400 block">That's why we built Layers.</span>
+          <span className="text-lime-400 block">That&apos;s why we built Layers.</span>
         </div>
         </div>
         <div className="h-[150vh]" ref={scrollTarget}></div>

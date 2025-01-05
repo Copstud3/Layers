@@ -51,7 +51,7 @@ export default function SignUp() {
       <Header />
       <div className="h-[calc(100vh-92px)] md:h-[calc(100vh-98px)] xl:h-[calc(100vh-130px)] flex flex-col justify-center max-w-lg mx-auto gap-6 px-4">
         <h2 className="text-2xl md:text-4xl font-medium text-center">
-          Kick off here! These designs won't make{' '}
+          Kick off here! These designs won&apos;t make{' '}
           <span className="text-lime-400">themselves.</span>
         </h2>
         

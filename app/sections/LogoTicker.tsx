@@ -38,9 +38,9 @@ export default function LogoTicker() {
             transition={{duration:20, ease: "linear", repeat: Infinity}}
           >
             {Array.from({ length: 2 }).map((_, i) => (
-              <Fragment>
+              <Fragment key={i}>
                 {logos.map((logo) => (
-                  <Image src={logo.image} key={logo.name} alt={logo.name} />
+                  <Image src={logo.image} key={logo.name} alt={`${logo.name} ${_}`} />
                 ))}
               </Fragment>
             ))}

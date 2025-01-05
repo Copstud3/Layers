@@ -6,6 +6,7 @@ import Button from "@/components/Button";
 import { useState } from "react";
 import { twMerge } from "tailwind-merge";
 import { AnimatePresence, motion } from "motion/react";
+import Link from "next/link";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -23,12 +24,12 @@ export default function Navbar() {
         <div className="border border-white/15 rounded-[27px] md:rounded-full bg-neutral-950/70 backdrop-blur">
           <div className="grid grid-cols-2 xl:grid-cols-3 p-2 px-4 md:pr-2 items-center ">
             <div>
-              <a href="/">
+              <Link href="/">
               <Image
                 src={logoImage}
                 alt="Layers logo"
                 className="h-9 md:h-auto w-auto"
-              /></a>
+              /></Link>
             </div>
             <div className="lg:flex justify-center items-center hidden">
               <nav className="flex gap-6 font-medium">
