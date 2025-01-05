@@ -14,7 +14,8 @@ interface SignUpFormData {
   confirmPassword: string;
 }
 
-export default function SignUp() {
+function SignUpForm() {
+  const searchParams = useSearchParams();
   const [formData, setFormData] = useState<SignUpFormData>({
     firstName: "",
     lastName: "",
@@ -23,7 +24,7 @@ export default function SignUp() {
     confirmPassword: "",
   });
 
-  const searchParams = useSearchParams(); // Get search params
+  // Get search params
 
   useEffect(() => {
     const emailParam = searchParams?.get("email");
@@ -47,7 +48,7 @@ export default function SignUp() {
   };
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <>
       <Header />
       <div className="h-[calc(100vh-92px)] md:h-[calc(100vh-98px)] xl:h-[calc(100vh-130px)] flex flex-col justify-center max-w-lg mx-auto gap-6 px-4">
         <h2 className="text-2xl md:text-4xl font-medium text-center">
@@ -124,6 +125,13 @@ export default function SignUp() {
           </p>
         </form>
       </div>
+    </>
+  );
+}
+export default function SignUp() {
+  return (
+    <Suspense>
+      <SignUpForm />
     </Suspense>
   );
 }
