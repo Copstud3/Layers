@@ -26,7 +26,7 @@ export default function SignUp() {
   const searchParams = useSearchParams();
 
   useEffect(() => {
-    const emailParam = searchParams.get('email');
+    const emailParam = searchParams?.get('email');
     if (emailParam) {
       setFormData(prev => ({ ...prev, email: emailParam }));
     }
