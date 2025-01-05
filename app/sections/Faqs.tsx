@@ -5,7 +5,12 @@ import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
 import { twMerge } from "tailwind-merge";
 
-const faqs = [
+interface FAQ {
+  question: string;
+  answer: string;
+}
+
+const faqs: FAQ[] = [
   {
     question: "How is Layers different from other design tools?",
     answer:
@@ -34,9 +39,9 @@ const faqs = [
 ];
 
 export default function Faqs() {
-  const [selectedIndex, setSelectedIndex] = useState(null);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
-  const toggleFaq = (faqIndex) => {
+  const toggleFaq = (faqIndex: number): void => {
     setSelectedIndex((prevIndex) => (prevIndex === faqIndex ? null : faqIndex));
   };
 
@@ -47,7 +52,8 @@ export default function Faqs() {
           <Tag>Faqs</Tag>
         </div>
         <h2 className="text-6xl font-medium mt-6 text-center max-w-xl mx-auto">
-          Questions? We&apos;ve got <span className="text-lime-400">answers</span>
+          Questions? We&apos;ve got{" "}
+          <span className="text-lime-400">answers</span>
         </h2>
         <div className="mt-12 flex flex-col gap-6 max-w-xl mx-auto">
           {faqs.map((faq, faqIndex) => (
