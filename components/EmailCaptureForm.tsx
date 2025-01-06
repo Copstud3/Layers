@@ -17,7 +17,7 @@ export default function EmailCaptureForm() {
   return (
     <div className="flex justify-center items-center px-4 w-full">
       <form
-        className="flex border border-white/15 rounded-full p-2 mt-8 justify-between w-full max-w-lg"
+        className="flex border border-white/15 rounded-full p-2 mt-8 justify-between"
         onSubmit={handleSubmit}
       >
         <input
